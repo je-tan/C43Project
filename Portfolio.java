@@ -155,15 +155,6 @@ public class Portfolio {
 			return -1;
 		}
 	}
-	public void addStockEntry(Date date, double open, double high, double low, double close, int volume, String symbol, Statement stmt) {
-		try {
-			String sql_add_stock_entry = "INSERT INTO stock (timestamp, open, high, low, close, volume, symbol) VALUES ('" + date + "'," + open + ", " + high + ", " + low + ", " + close + ", " + volume + ", '" + symbol + "');";
-			stmt.executeUpdate(sql_add_stock_entry);
-			System.out.println("Added new entry to stock table");
-		} catch (SQLException e) {
-			System.err.println("Failed to execute add stock history query" + e.getMessage());
-		}
-	}
 
 	// Withdraw from cash account
 	public void withdraw(String username, String portfolio_name, double amount, Statement stmt) {

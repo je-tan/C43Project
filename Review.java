@@ -69,7 +69,6 @@ public class Review {
 	        System.out.println("Failed to execute query");
 	    }
 	}	
-	//
 	// Delete a review
 	public void deleteReview(String user, String stocklist_name, String stocklist_owner, Statement stmt) {
 		try {
@@ -145,7 +144,4 @@ public class Review {
 	        System.out.println("Failed to get all reviews for stocklist");
 	    }
 	}
-	//
-	// Get all reviews for a private stocklist that user can view 
-	//
 }

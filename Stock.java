@@ -52,7 +52,7 @@ public class Stock {
 			}
                         double old = rs.getDouble("close");
 
-			String sql_curr_price = "SELECT close FROM stock WHERE symbol = '" + symbol + "' ORDER BY timestamp DESC LIMIT 10;";
+			String sql_curr_price = "SELECT close FROM stock WHERE symbol = '" + symbol + "' ORDER BY timestamp DESC LIMIT 1;";
                         rs = stmt.executeQuery(sql_curr_price);
 			if (!rs.next()) {
 				System.out.println("something went wrong");
